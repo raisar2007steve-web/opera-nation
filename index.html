@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#05070c" />
+    <meta
+      name="description"
+      content="OPERA NATION — SIX CITIES. A browser-native open-world game. Explore Metropolis, drive, meet citizens, take on work."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>OPERA NATION — SIX CITIES</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas" aria-label="Game viewport"></canvas>
+
+      <div id="splash" class="screen splash">
+        <div class="splash-vignette"></div>
+        <div class="splash-scan"></div>
+        <div class="splash-content">
+          <div class="splash-kicker">An original open-world experience</div>
+          <h1 class="splash-title">OPERA<span class="splash-dot">·</span><em>NATION</em></h1>
+          <p class="splash-tagline">
+            One connected nation. Six cities. A life you build yourself — from the harbour lights of
+            Metropolis to the mountains beyond.
+          </p>
+          <div class="load-block">
+            <div class="load-row">
+              <span id="load-stage">Establishing link</span>
+              <span id="load-percent">0%</span>
+            </div>
+            <div class="load-bar"><i id="load-fill"></i></div>
+            <div class="load-detail" id="load-detail">Checking rendering backend…</div>
+          </div>
+          <div class="splash-meta">
+            <span>Browser-native</span><span>WebGPU / WebGL 2</span><span>v0.1 · Stage 1–2 build</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ui-root" aria-live="polite"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

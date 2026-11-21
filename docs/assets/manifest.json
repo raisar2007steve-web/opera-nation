@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "buildStage": "Stage 1-2: Harborview playable slice",
+  "note": "All environment, character and vehicle meshes in this build are generated procedurally in TypeScript. No external model or texture downloads are required to play. The entries below describe where production GLB/KTX2 assets will be registered as stages 3-9 land.",
+  "characters": {
+    "player": { "source": "procedural", "script": "src/avatar/Avatar.ts", "lods": 1 },
+    "npcs": { "source": "procedural", "script": "src/npcs/Npc.ts", "variants": 8 }
+  },
+  "vehicles": {
+    "kestrel": { "source": "procedural", "script": "src/vehicles/Vehicle.ts", "class": "land", "owned": true },
+    "cruiser": { "source": "procedural", "script": "src/vehicles/Vehicle.ts", "class": "land" },
+    "taxi": { "source": "procedural", "script": "src/vehicles/Vehicle.ts", "class": "land" }
+  },
+  "environment": {
+    "terrain": { "source": "procedural", "script": "src/terrain/Terrain.ts", "extentMeters": 2600 },
+    "city": { "source": "procedural", "script": "src/world/World.ts", "district": "Harborview" },
+    "interior": { "source": "procedural", "script": "src/world/World.ts", "rooms": 1 }
+  },
+  "textures": {
+    "facades": "runtime DynamicTexture (glass, concrete, brick, shopfront)",
+    "terrain": "runtime DynamicTexture",
+    "water": "runtime DynamicTexture"
+  },
+  "audio": {
+    "source": "procedural Web Audio API",
+    "script": "src/audio/AudioSystem.ts"
+  },
+  "plannedModels": [
+    "public/models/characters/player.glb",
+    "public/models/vehicles/sports_car.glb",
+    "public/models/environment/building_kit.glb",
+    "public/textures/ktx2/facades.ktx2"
+  ]
+}
